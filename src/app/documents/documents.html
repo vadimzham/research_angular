@@ -1,0 +1,132 @@
+<div class="row wrapper border-bottom white-bg page-heading">
+  <div class="col-lg-10">
+    <h2>Документы</h2>
+    <ol class="breadcrumb">
+      <li>
+        <a href="index.html">Рабочий стол</a>
+      </li>
+      <li class="active">
+        <strong>Документы</strong>
+      </li>
+    </ol>
+  </div>
+  <div class="col-lg-2"></div>
+</div>
+
+<div class="wrapper wrapper-content animated" ng-controller="DocumentsCtrl">
+  <div class="row">
+    <div class="col-lg-2">
+      <div class="ibox float-e-margins">
+        <div class="ibox-title">
+          <h5>Вид документа</h5>
+          <div ibox-tools></div>
+        </div>
+        <div class="ibox-content scrollable">
+          <ul class="type-list">
+            <li>
+              <input type="checkbox" ng-model="types.all.checked" ng-change="changeAllStates(types)"></input>
+              <a ng-click="switchAllCheckboxes(types)">
+                <span><strong>Все</strong></span>
+                <span class="label label-plain pull-right">{{ types.all.count }}</span>
+              </a>
+            </li>
+            <li ng-repeat="type in types">
+              <input type="checkbox" ng-checked="types.all.checked" ng-model="type.checked"></input>
+              <a ng-click="switchCheckbox(type)">
+                <span>{{ type.name }}</span>
+                <span class="label label-plain pull-right">{{ type.count }}</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="ibox float-e-margins">
+        <div class="ibox-title">
+          <h5>Стадия документа</h5>
+          <div ibox-tools></div>
+        </div>
+        <div class="ibox-content scrollable">
+          <ul class="stage-list">
+            <li>
+              <input type="checkbox" ng-model="stages.all.checked" ng-change="changeAllStates(stages)"></input>
+              <a ng-click="switchAllCheckboxes(stages)">
+                <span><strong>Все</strong></span>
+                <span class="label label-plain pull-right">{{ stages.all.count }}</span>
+              </a>
+            </li>
+            <li ng-repeat="stage in stages">
+              <input type="checkbox" ng-checked="stages.all.checked" ng-model="stage.checked"></input>
+              <a ng-click="switchCheckbox(stage)">
+                <span>{{ stage.name }}</span>
+                <span class="label label-plain pull-right">{{ stage.count }}</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-10">
+      <div class="ibox float-e-margins">
+        <div class="ibox-title right-header">
+          <div class="row">
+            <h2>Список документов</h2>
+            <a class="btn btn-primary">Добавить документ</a>
+          </div>
+        </div>
+        <div class="ibox-content">
+          <table class="table table-striped table-bordered table-hover">
+            <thead>
+              <tr>
+                <th>Номер доркумента</th>
+                <th>Вид документа</th>
+                <th>Дата начала</th>
+                <th>Дата окончания</th>
+                <th>Исполнитель</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody ng-include="documentsURL" onload></tbody>
+          </table>
+        </div>
+      </div>
+      <div class="ibox float-e-margins col-lg-6">
+        <div class="ibox-title">
+          <h5>Состояние денежных потоков</h5>
+          <div ibox-tools></div>
+        </div>
+        <div class="ibox-content">
+          <table id="money-flows" class="table table-striped table-bordered table-hover">
+            <thead>
+              <tr>
+                <th>Состояние</th>
+                <th>Кол-во</th>
+                <th>Приход</th>
+                <th>Расход</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Ожидает оплаты</td>
+                <td>{{ moneyRoute.awaiting.count }}</td>
+                <td>{{ moneyRoute.awaiting.income }}</td>
+                <td>{{ moneyRoute.awaiting.expence }}</td>
+              </tr>
+              <tr>
+                <td>Оплачен</td>
+                <td>{{ moneyRoute.paid.count }}</td>
+                <td>{{ moneyRoute.paid.income }}</td>
+                <td>{{ moneyRoute.paid.expence }}</td>
+              </tr>
+              <tr>
+                <td>Просрочен</td>
+                <td>{{ moneyRoute.overdue.count }}</td>
+                <td>{{ moneyRoute.overdue.income }}</td>
+                <td>{{ moneyRoute.overdue.expence }}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

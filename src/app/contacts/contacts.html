@@ -1,0 +1,61 @@
+<div class="row wrapper border-bottom white-bg page-heading">
+  <div class="col-lg-10">
+    <h2>Контакты</h2>
+    <ol class="breadcrumb">
+      <li>
+        <a href="index.html">Рабочий стол</a>
+      </li>
+      <li class="active">
+        <strong>Контакты</strong>
+      </li>
+    </ol>
+  </div>
+  <div class="col-lg-2"></div>
+</div>
+
+<div class="wrapper wrapper-content animated" ng-controller="ContactsCtrl">
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="ibox float-e-margins">
+        <div class="ibox-title right-header">
+          <div class="row">
+            <h2>Список контактов</h2>
+            <a class="btn btn-primary">Добавить контакт</a>
+          </div>
+        </div>
+        <div class="ibox-content">
+          <table class="table table-striped table-bordered table-hover" datatable="ng">
+            <thead>
+              <tr>
+                <th>Ф.И.О.</th>
+                <th>Контрагент</th>
+                <th>Телефон</th>
+                <th>Добавочный</th>
+                <th>Мобильный</th>
+                <th>E-mail</th>
+                <th>Автор</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr ng-repeat="contact in contacts">
+                <td>{{ contact.name }}</td>
+                <td>{{ contact.partner }}</td>
+                <td>{{ contact.phone }}</td>
+                <td>{{ contact.phoneAdd }}</td>
+                <td>{{ contact.phoneMobile }}</td>
+                <td>{{ contact.email }}</td>
+                <td>{{ contact.author }}</td>
+                <td>
+                  <a class="href-icon btn-delete" title="Удалить">
+                    <i class="fa fa-times"></i>
+                  </a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,29 @@
+<div class="row wrapper border-bottom white-bg page-heading">
+  <div class="col-lg-10">
+    <h2>Бюджет</h2>
+    <ol class="breadcrumb">
+      <li>
+        <a href="index.html">Рабочий стол</a>
+      </li>
+      <li class="active">
+        <strong>Бюджет</strong>
+      </li>
+    </ol>
+  </div>
+  <div class="col-lg-2"></div>
+</div>
+
+<div class="col-lg-12">
+  <div class="panel blank-panel ui-tab" ng-controller="BudgetCtrl">
+    <uib-tabset>
+      <uib-tab heading="Бюджет" active="tab.active" class="dsads">
+        <div class="row" ng-include="budgetURL" onload></div>
+      </uib-tab>
+      <uib-tab heading="Месячный бюджет">
+        <div class="row" ng-include="budgetMonthlyURL" onload></div>
+      </uib-tab>
+
+    </uib-tabset>
+
+  </div>
+</div>

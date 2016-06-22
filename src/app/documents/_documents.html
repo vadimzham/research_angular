@@ -1,0 +1,8 @@
+<tr ng-repeat="document in documents | filter:filterDocumentTypes | filter:filterDocumentStages">
+  <td>{{ document.number }}</td>
+  <td>{{ document.type }}</td>
+  <td>{{ document.startDate }}</td>
+  <td>{{ document.endDate }}</td>
+  <td>{{ document.performer }}</td>
+  <td><a class="href-icon btn-delete" title="Удалить"><i class="fa fa-times"></i></a></td>
+</tr>

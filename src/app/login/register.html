@@ -1,0 +1,56 @@
+<link href='https://fonts.googleapis.com/css?family=Signika:600' rel='stylesheet' type='text/css'>
+<style>
+  body {
+    background-color: #f3f3f4;
+  }
+  .logo-name {
+    font-family: 'Signika', sans-serif;
+    font-size: 200px !important;
+  }
+</style>
+<div class="middle-box text-center loginscreen   animated fadeInDown">
+  <div>
+    <div>
+
+      <h1 class="logo-name">M</h1>
+
+    </div>
+    <h3>Регистрация в CRM</h3>
+    <p>Создайте аккаунт, чтобы начать ей пользоваться.</p>
+    <form novalidate class="simple-form m-t">
+      <div class="form-group">
+        <input type="text" class="form-control" placeholder="Логин" required="" ng-model="register.login">
+      </div>
+      <div class="form-group">
+        <input type="email" class="form-control" placeholder="Email" required="" ng-model="register.email">
+      </div>
+      <div class="form-group">
+        <input type="password" class="form-control" placeholder="Пароль" required="" ng-model="register.password">
+      </div>
+      <div class="form-group">
+        <input type="password" class="form-control" placeholder="Подтверждение пароля" required="" ng-model="register.password_confirmation">
+      </div>
+      <div class="form-group">
+        <input type="text" class="form-control" placeholder="ФИО" required="" ng-model="register.name">
+      </div>
+      <div class="form-group">
+        <input type="text" class="form-control" placeholder="Название компании" required="" ng-model="register.company">
+      </div>
+      <div class="form-group">
+        <div class="checkbox checkbox-primary">
+          <input type="checkbox" ng-model="register.agree">
+          <label>Принять лицензионное соглашение</label>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary block full-width m-b" ng-click="send(register)">Регистрация</button>
+
+      <p class="text-muted text-center">
+        <small>У вас уже есть аккаунт?</small>
+      </p>
+      <a class="btn btn-sm btn-white btn-block" href="login.html">Вход</a>
+    </form>
+    <p class="m-t">
+      <small><strong>Copyright</strong> Vadim Z. &copy; 2016</small>
+    </p>
+  </div>
+</div>

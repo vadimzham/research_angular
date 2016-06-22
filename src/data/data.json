@@ -1,0 +1,47 @@
+{ "status": "success",
+  "partners":
+    [
+      {
+        "id": 1,
+        "name": "Организация 1",
+        "phone": "Телефон 1",
+        "email": "E-mail 1"
+      },
+      {
+        "id": 2,
+        "name": "Организация 2",
+        "phone": "Телефон 2",
+        "email": "E-mail 2"
+      }
+    ],
+  "contacts":
+    [
+      {
+        "name": "ФИО 1",
+        "position": "Должность 1",
+        "phone": "Телефон 1",
+        "email": "E-mail 1"
+      },
+      {
+        "name": "ФИО 1",
+        "position": "Должность 1",
+        "phone": "Телефон 2",
+        "email": "E-mail 2"
+      }
+    ],
+  "partnerContacts":
+    [
+      {
+        "name": "ФИО 1",
+        "position": "Должность 1",
+        "phone": "Телефон 1",
+        "email": "E-mail 1"
+      },
+      {
+        "name": "ФИО 2",
+        "position": "Должность 2",
+        "phone": "Телефон 2",
+        "email": "E-mail 2"
+      }
+    ]
+}

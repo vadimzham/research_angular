@@ -1,0 +1,39 @@
+<link href='https://fonts.googleapis.com/css?family=Signika:600' rel='stylesheet' type='text/css'>
+<style>
+  body {
+    background-color: #f3f3f4;
+  }
+  .logo-name {
+    font-family: 'Signika', sans-serif;
+    font-size: 200px !important;
+  }
+</style>
+<div class="middle-box text-center loginscreen  animated fadeInDown">
+  <div ng-controller="LoginCtrl">
+    <div>
+      <h1 class="logo-name">M</h1>
+    </div>
+    <h3>Добро пожаловать в CRM</h3>
+    <p>Войдите в систему, чтобы начать ей пользоваться.</p>
+    <form novalidate class="simple-form m-t">
+      <div class="form-group">
+        <input type="text" class="form-control" placeholder="Логин" required="" ng-model="login.login">
+      </div>
+      <div class="form-group">
+        <input type="password" class="form-control" placeholder="Пароль" required="" ng-model="login.password">
+      </div>
+      <button type="submit" class="btn btn-primary block full-width m-b" ng-click="send(login)">Вход</button>
+
+      <a ui-sref="forgot_password">
+        <small>Забыли пароль?</small>
+      </a>
+      <p class="text-muted text-center">
+        <small>Ещё не зарегистрированы?</small>
+      </p>
+      <a class="btn btn-sm btn-white btn-block" ui-sref="register">Зарегистрироваться</a>
+    </form>
+    <p class="m-t">
+      <small><strong>Copyright</strong> Vadim Z. &copy; 2016</small>
+    </p>
+  </div>
+</div>
